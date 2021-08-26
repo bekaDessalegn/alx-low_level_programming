@@ -1,1 +1,1 @@
-file 0 - this is a script that runs a C file through the preprocessor.
+file 0 - this is a script that runs a C file through the preprocessor. file 4 - prints out a text using the puts function.
