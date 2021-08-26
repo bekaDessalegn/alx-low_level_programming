@@ -1,0 +1,2 @@
+#!/bin/bash
+cc -c 1-main.c > 1-main.0
