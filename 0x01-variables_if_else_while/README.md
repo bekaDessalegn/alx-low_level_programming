@@ -1,0 +1,1 @@
+file 0 - prints out a random number and tells us if it's positive,  negative or zero.
