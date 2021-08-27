@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 /**
  * main - prints a random number and tells us if it is -ve, +ve or 0.
  * Return: 0 if exited properly, non-zero otherwise
