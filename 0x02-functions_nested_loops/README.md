@@ -1,1 +1,1 @@
-file 0 - prints out a text. file 1 - prints out the lower case alphabets using putchar.
+file 0 - prints out a text. file 1 - prints out the lower case alphabets using putchar. file 2 - prints out the lower case alphabets X10.
