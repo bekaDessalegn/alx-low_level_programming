@@ -1,0 +1,1 @@
+file 0 - prints out a text.
