@@ -1,16 +1,16 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - displays all lower case alphabets using putchar
- * Return: 0 if exited properly, non-zero otherwise
-*/
-
-int main(void)
+ * print_alphabet - print alphabet in lowercase.
+ */
+void print_alphabet(void)
 {
-for (int i = 97; i < 123; i++)
+char ch;
+ch = 'a';
+while (ch <= 'z')
 {
-putchar(i);
+_putchar(ch);
+ch++;
 }
-putchar('\n');
-return (0);
+_putchar('\n');
 }

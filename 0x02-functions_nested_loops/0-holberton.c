@@ -1,12 +1,19 @@
-#include <studio.h>
+#include "main.h"
 
 /**
- * main - displays a text.
- * Return: 0 if exited properly, non-zero otherwise
-*/
-
+ *main- prints Holberton, followed by a new line
+ *Return:always 0 (Success)
+ */
 int main(void)
 {
-printf("Holberton\n");
+int i = 0;
+char msg[] = "_putchar\n";
+char c;
+while (i <= 8)
+{
+c = msg[i];
+_putchar(c);
+i++;
+}
 return (0);
 }
