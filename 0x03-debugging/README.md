@@ -1,0 +1,1 @@
+This project is all about debugging. Debugging is the process of finding and resolving bugs which are defects or problems that prevent correct operation within computer program,software or system.
