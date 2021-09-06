@@ -1,1 +1,1 @@
-file 0 - changing the value to 98.
+file 0 - changing the value to 98.file 1 - takes two pointers as an argument and swaps the value.
