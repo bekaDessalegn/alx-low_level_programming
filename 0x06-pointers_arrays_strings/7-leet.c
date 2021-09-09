@@ -1,26 +1,28 @@
-
-#include "holberton.h"
+#include "main.h"
 
 /**
- * leet - encode latters 1337
- * @str: string to be encode
- * Return: encoded string
+ * leet - encodes a string in 1337
+ * @s: string to be encoded
+ *
+ * Return: the resulting string;
  */
-
-char *leet(char *str)
+char *leet(char *s)
 {
-	int i, j, num = 5;
-	char str1[] = "aeotl";
-	char str2[] = "AEOTL";
-	char encode[] = "43071";
+	int i, j;
 
-	for (i = 0; str[i] != '\0'; i++)
+	char *a = "aAeEoOtTlL";
+	char *b = "4433007711";
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; j < num; j++)
+		for (j = 0; j < 10; j++)
 		{
-			if (str[i] == str2[j] || str[i] == str1[j])
-				str[i] = encode[j];
+			if (s[i] == a[j])
+			{
+				s[i] = b[j];
+			}
 		}
 	}
-	return (str);
+
+	return (s);
 }

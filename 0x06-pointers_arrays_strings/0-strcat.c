@@ -1,26 +1,30 @@
-#include "holberton.h"
-#include <string.h>
+#include "main.h"
 
 /**
- * _strcat - appends src to dest string.
- * @dest: new string.
- * @src: string to be copied to dest.
- * Return: character string to a pointer.
+ * _strcat - concatenates two strings
+ * @dest: string to append to
+ * @src: string to add
+ *
+ * Return: a pointer to the resulting string
  */
-
 char *_strcat(char *dest, char *src)
 {
-	int len, ind2;
+	int i, j;
 
-	for (len = 0; dest[len] != '\0'; len++)
-		;
+	i = 0;
+	j = 0;
 
-	for (ind2 = 0; src[ind2] != '\0'; ind2++)
+	while (dest[i] != '\0')
+		i++;
+
+	while (src[j] != '\0')
 	{
-		dest[len] = src[ind2];
-		len++;
+		dest[i] = src[j];
+		j++;
+		i++;
 	}
 
-	dest[len] = '\0';
+	dest[i] = '\0';
+
 	return (dest);
 }

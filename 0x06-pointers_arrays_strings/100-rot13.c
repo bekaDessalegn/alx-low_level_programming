@@ -1,25 +1,29 @@
+#include "main.h"
 
-#include "holberton.h"
 /**
- * rot13 - enocde using rot13
- * @str: string to be encoded
- * Return: encoded string
+ * rot13 - encodes a string in rot13
+ * @s: string to be encoded
+ *
+ * Return: the resulting string
  */
-char *rot13(char *str)
+char *rot13(char *s)
 {
-	int i;
+	int i, j;
 
-	for (i = 0; str[i] != '\0'; i++)
+	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		while ((str[i] >= 'A' && str[i] <= 'M') || (str[i] >= 'a' && str[i] <= 'm'))
+		for (j = 0; a[j] != '\0'; j++)
 		{
-			str[i] = str[i] + 13;
-			i++;
-		}
-		if ((str[i] >= 'N' && str[i] <= 'Z') || (str[i] >= 'n' && str[i] <= 'z'))
-		{
-			str[i] = str[i] - 13;
+			if (s[i] == a[j])
+			{
+				s[i] = b[j];
+				break;
+			}
 		}
 	}
-	return (str);
+
+	return (s);
 }

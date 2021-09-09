@@ -1,48 +1,34 @@
+#include "main.h"
 
-#include "holberton.h"
 /**
- * cap_string - cappitalize first latter of words
- * @str: string to be capitalize
- * Return: char pointer to string
+ * cap_string - capitalizes everey word of a string
+ * @s: string to modify
+ *
+ * Return: the resulting string
  */
-
-
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
-	int i;
+	int i, j;
 
-	for (i = 0; str[i] != '\0'; i++)
+	char spe[13] = {' ', '\t', '\n', ',', ';', '.',
+		'!', '?', '"', '(', ')', '{', '}'};
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
+		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
+			s[i] -= 32;
 
-		if (str[i] == str[0])
-			if (str[i] >= 97 && str[i] <= 122)
-				str[i] = str[i] - 32;
-
-		if (str[i] == ',' || str[i] == ',' || str[i] == '"')
+		for (j = 0; j < 13; j++)
 		{
-			if (str[i + 1] >= 97 && str[i + 1] <= 122)
-				str[i + 1] = str[i + 1] - 32;
-
-		}
-
-		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
-		{
-			if (str[i + 1] >= 97 && str[i + 1] <= 122)
-				str[i + 1] = str[i + 1] - 32;
-
-		}
-
-		if (str[i] == '.' || str[i] == '!' || str[i] == '?')
-		{
-			if (str[i + 1] >= 97 && str[i + 1] <= 122)
-				str[i + 1] = str[i + 1] - 32;
-		}
-
-		if (str[i] == '(' || str[i] == ')' || str[i] == '{')
-		{
-			if (str[i + 1] >= 97 && str[i + 1] <= 122)
-				str[i + 1] = str[i + 1] - 32;
+			if (s[i] == spe[j])
+			{
+				if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
+				{
+					s[i + 1] -= 32;
+				}
+			}
 		}
 	}
-	return (str);
+
+	return (s);
 }
