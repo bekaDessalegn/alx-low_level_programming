@@ -1,20 +1,30 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * _strcmp - compare two string
- * @s1: first string to be compared
- * @s2: second string to be copmpard
- * Return: negative if s2 grater +ve if s1 grater else 0
+ * _strcmp - compare strings
+ * @s1: first input char
+ * @s2: second input char
+ *
+ * Description: the function compares two strings
+ * Return: character count
  */
 
 int _strcmp(char *s1, char *s2)
 {
+	int i, diff;
 
-	for (; (*s1 != '\0' && *s2 != '\0') && (*s1 == *s2); s1++, s2++)
-		;
-
-	if (*s1 == *s2)
-		return (0);
-	else
-		return (*s1 - *s2);
+	for (i = 0; s1[i] != '\0'; ++i)
+	{
+		if (s1[i] > s2[i])
+		{
+			diff = s1[i] - s2[i];
+			return (diff);
+		}
+		else if (s1[i] < s2[i])
+		{
+			diff = s1[i] - s2[i];
+			return (diff);
+		}
+	}
+	return (0);
 }

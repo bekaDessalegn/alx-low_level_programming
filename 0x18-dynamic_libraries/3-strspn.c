@@ -1,30 +1,34 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
-  * _strspn - count same chars form z given string
-  * @s: original given string
-  * @accept: string with chars to be coount in string s
-  * Return: number of first same bites in s
-  */
+ * _strspn - gets length
+ * @s: input string
+ * @accept: accepted characters
+ *
+ * Description: gets the length of a prefix substring
+ * Return: num of bytes in the initial seg of s
+ * consisting only of bytes from accept
+ */
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, j, len = 0;
+	unsigned int i, j;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i]; i++)
 	{
-
-		for (j = 0; accept[j] != '\0'; j++)
+		for (j = 0; accept[j]; j++)
 		{
 			if (s[i] == accept[j])
 			{
-				len++;
 				break;
 			}
 		}
-		if (accept[j] == '\0')
+		if (!accept[j])
+		{
 			break;
+		}
 	}
-
-	return (len);
+	return (i);
 }
+
+

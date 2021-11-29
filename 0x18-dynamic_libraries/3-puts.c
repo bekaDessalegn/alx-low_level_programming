@@ -1,17 +1,21 @@
-#include "holberton.h"
-#include <stdio.h>
+#include "main.h"
 
 /**
- * _puts - prints a string using pointer.
- * @str: pointes to an int
- * Return: 0.
+ * _puts - put string
+ * @str: first parameter
+ *
+ * Description: prints a string
+ * Return: Alwalys (0)
  */
 
 void _puts(char *str)
 {
 	while (*str != '\0')
 	{
-		printf("%c", *str++);
+		_putchar(*str);
+		str++;
 	}
-	printf("\n");
+	_putchar('\n');
 }
+
+

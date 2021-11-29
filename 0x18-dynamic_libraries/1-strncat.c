@@ -1,31 +1,31 @@
- #include <stdio.h>
-#include "holberton.h"
+#include "main.h"
 
 /**
- * *_strncat - check the code for Holberton School students.
- *@dest: value one
- *@src: value two
- *@n: int n
- * Return: Always 0.
+ * _strncat - concatenates two strings
+ * @dest: first input string
+ * @src: second input string
+ * @n: number of butes to be used
+ *
+ * Description: use at most n bytes from src
+ * Return: returns concatenated string
  */
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int  len, j;
+	int len, i;
 
-	for (len = 0; dest[len] != '\0'; len++)
-		;
-
-	for (j = 0; j < n; len++, j++)
+	i = 0;
+	len = 0;
+	while (dest[len] != '\0')
 	{
-		dest[len] = src[j];
-		if (src[j] == '\0')
-			break;
+		++len;
 	}
-
-	if (n < j)
+	while (src[i] != 0 && i < n)
 	{
-		dest[len] = '\0';
+		dest[len] = src[i];
+		++i;
+		++len;
 	}
+	dest[len] = '\0';
 	return (dest);
 }
